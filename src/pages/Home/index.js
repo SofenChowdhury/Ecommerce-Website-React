@@ -118,15 +118,15 @@ const Home = (props) => {
 
     return (
         <div style={{display:'block'}}>
-            <SliderBanner />
+            {/* <SliderBanner /> */}
             <CatSlider data={prodData} />
 
-            <Banners />
+            {/* <Banners /> */}
 
 
             <section className='homeProducts homeProductWrapper'>
                 <div className='container-fluid'>
-                    <div className='d-flex align-items-center homeProductsTitleWrap'>
+                    {/* <div className='d-flex align-items-center homeProductsTitleWrap'>
                         <h2 className='hd mb-0 mt-0 res-full'>Popular Products</h2>
                         <ul className='list list-inline ml-auto filterTab mb-0 res-full'>
 
@@ -152,7 +152,7 @@ const Home = (props) => {
                             }
 
                         </ul>
-                    </div>
+                    </div> */}
 
 
                     <div className={`productRow ${isLoadingProducts===true && 'loading'}`} ref={productRow}>
@@ -179,7 +179,7 @@ const Home = (props) => {
 
 
 
-            <section className='homeProducts homeProductsRow2 pt-0'>
+            {/* <section className='homeProducts homeProductsRow2 pt-0'>
                 <div className='container-fluid'>
                     <div className='d-flex align-items-center'>
                         <h2 className='hd mb-0 mt-0'>Daily Best Sells</h2>
@@ -212,11 +212,11 @@ const Home = (props) => {
 
 
                 </div>
-            </section>
+            </section> */}
 
 
 
-            <section className='topProductsSection'>
+            {/* <section className='topProductsSection'>
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col'>
@@ -237,7 +237,7 @@ const Home = (props) => {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
 
         </div>

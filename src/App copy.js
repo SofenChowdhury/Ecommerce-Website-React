@@ -34,10 +34,10 @@ function App() {
   const [isOpenFilters, setIsopenFilters] = useState(false);
 
 console.log("data");
-console.log(productData);
+console.log(data);
 
   useEffect(() => {
-    getData('https://dummyjson.com/products?skip=0&limit=100');
+    // getData('http://localhost:5000/productData');
     // getCartData("http://localhost:5000/cartItems");
 
     const is_Login = localStorage.getItem('isLogin');
@@ -63,9 +63,9 @@ console.log(productData);
       })
 
 
-      // await axios.get('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=27dad2d0abd34a22965727ce8d939077').then((response) => {
-      //     console.log(response)
-      // })
+      await axios.get('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=27dad2d0abd34a22965727ce8d939077').then((response) => {
+          console.log(response)
+      })
 
 
 
@@ -74,8 +74,6 @@ console.log(productData);
     }
   }
 
-  // console.log('productData');
-  // console.log(productData);
   const getCartData = async (url) => {
     try {
       await axios.get(url).then((response) => {
@@ -156,7 +154,7 @@ console.log(productData);
         <Header data={data.productData} />
         <Routes>
           {/* <Route exact={true} path="/" element={<Home data={data.productData} />} /> */}
-          <Route exact={true} path="/" element={<Listing data={data.productData} new={productData?.products} single={true} />} />
+          <Route exact={true} path="/" element={<Listing data={data.productData} single={true} />} />
           <Route exact={true} path="/cat/:id" element={<Listing data={data.productData} single={true} />} />
           <Route exact={true} path="/cat/:id/:id" element={<Listing data={data.productData} single={false} />} />
           <Route exact={true} path="/product/:id" element={<DetailsPage data={data.productData} />} />

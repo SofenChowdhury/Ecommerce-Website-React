@@ -119,7 +119,7 @@ const Sidebar = (props) => {
     return (
         <>
             <div className={`sidebar ${context.isOpenFilters===true && 'open'}`}>
-                <div className='card border-0 shadow res-hide'>
+                {/* <div className='card border-0 shadow res-hide'>
                     <h3>Category</h3>
                     <div className='catList'>
                         {
@@ -139,7 +139,7 @@ const Sidebar = (props) => {
                         }
 
                     </div>
-                </div>
+                </div> */}
 
 
                 <div className='card border-0 shadow'>
@@ -208,7 +208,7 @@ const Sidebar = (props) => {
 
 
 
-                <img src={bannerImg} className='w-100' />
+                {/* <img src={bannerImg} className='w-100' /> */}
 
             </div>
         </>
